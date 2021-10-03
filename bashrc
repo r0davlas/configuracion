@@ -17,7 +17,7 @@ fi
 # ignorar mayusculas/minusculas en autocompletado 
 if [[ $iatest > 0]]; then bind "set completion-ignore-case on"; fi
 # autocompletado automatico 
-if [[ $iatest > 0]]  then bind "set show-all-if-ambiguous On" fi
+if [[ $iatest > 0]]  then bind "set show-all-if-ambiguous on" fi
 
 # expandir historico
 export HISTFILESIZE=10000
@@ -66,8 +66,25 @@ extract () {
 alias cls='clear'
 alias cd..='cd ..'
 alias ls=' ls -aFh --color=always'
-
+alias ll='ls -l'
 alias home='cd ~'
+
+# Alias git 
+alias gs='git status'
+alias gc='git commit'
+alias ga='git add'
+alias gd='git diff'
+alias gb='git branch'
+alias gl='git log'
+alias gsb='git show-branch'
+alias gco='git checkout'
+alias gg='git grep'
+alias gk='gitk --all'
+alias gr='git rebase'
+alias gri='git rebase --interactive'
+alias gcp='git cherry-pick'
+alias grm='git rm'
+
 
 # remapeo para vim
 setxkbmap -option caps:swapescape
